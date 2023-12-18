@@ -1,0 +1,257 @@
+:root {
+    --bgcolor: #353A40;
+    --textcolor: white;
+    --btncolor: #29A744;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--bgcolor);
+    height: 4em;
+    color: var(--textcolor);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    .logo {
+        display: inline-block;
+        margin: 0 3em;
+        & img {
+            height: 4em;
+            vertical-align: middle;
+        }
+        & h2 {
+            display: inline-block;
+        }
+    }
+    & nav {
+        float: right;
+        margin: 1.3em 3em;
+        & a {
+            color: var(--textcolor);
+            text-decoration: none;
+            padding: 0 0.5em;
+        }
+        .ticket {
+            color: var(--btncolor);
+        }
+    }
+}
+
+main {
+    position: relative;
+    & img {
+        filter: brightness(0.4);
+        max-width: 100%;
+    }
+    & section {
+        width: 40%;
+        position: absolute;
+        right: 4em;
+        top: 20%;
+        color: var(--textcolor);
+        text-align: right;
+        line-height: 1.5em;
+        & p {
+            margin: 20px 0;
+        }
+        & a {
+            text-decoration: none;
+            color: var(--textcolor);
+            margin: 15px;
+            border: 1px solid var(--textcolor);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: var(--btncolor);
+            border: 1px solid var(--btncolor);
+        }
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'orador orador'
+                         'paisaje descripcion'
+                         'formulario formulario';
+    width: 100%;
+    grid-template-rows: 90vh 60vh 50vh;
+    grid-template-columns: 50% 50%;
+    .item-1 {
+        grid-area: orador;
+        .title-orador {
+            margin: 20px;
+            text-align: center;
+            & h4 {
+                font-size: 0.8em;
+            }
+            & h2 {
+                font-size: 2em;
+            }
+        }
+        .card-oradores {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            & div[class^='card'] {
+                width: 250px;
+                border: 1px solid grey;
+                border-radius: 5px;
+                & img {
+                    width: 100%;
+                }
+                .container-card {
+                    width: 80%;
+                    margin: 20px;
+                    & a {
+                        text-decoration: none;
+                        padding: 0 5px;
+                    }
+                    .btn-card1 {
+                        background-color: yellow;
+                        border: 2px solid yellow;
+                        border-radius: 5px;
+                        color: black;
+                        font-weight: 800;
+                        font-size: 0.8em;
+                    }
+                    .btn-card2 {
+                        background-color: rgba(8, 214, 214, 0.826);
+                        border: 2px solid rgba(8, 214, 214, 0.826);
+                        border-radius: 5px;
+                        color: white;
+                        font-weight: 800;
+                        font-size: 0.8em;
+                    }
+                    .btn-card11 {
+                        background-color: rgb(107,117,126);
+                        border: 2px solid rgb(107,117,126);
+                        border-radius: 5px;
+                        color: white;
+                        font-weight: 800;
+                        font-size: 0.8em;
+                    }
+                    .btn-card22 {
+                        background-color: rgb(221,53,68);
+                        border: 2px solid rgb(221,53,68);
+                        border-radius: 5px;
+                        color: white;
+                        font-weight: 800;
+                        font-size: 0.8em;
+                    }
+                    & h3 {
+                        margin: 10px 0 10px 0;
+                    }
+                    & p {
+                        line-height: 1.3em;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+    }
+    .item-2 {
+        grid-area: paisaje;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .item-3 {
+        grid-area: descripcion;
+        padding: 20px;
+        background-color: var(--bgcolor);
+        color: var(--textcolor);
+        & p {
+            margin: 10px 0 20px 0;
+            font-size: 0.9em;
+            line-height: 1.5em;
+        }
+        & a {
+            text-decoration: none;
+            color: var(--textcolor);
+            border: 1px solid var(--textcolor);
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+    .item-4 {
+        grid-area: formulario;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h4 {
+            text-align: center;
+            font-size: 0.7em;
+        }
+        & h2 {
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: .2em;
+        }
+        & p {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 0.8em;
+        }
+        & form {
+            display: flex;
+            flex-direction: column;
+            width: 90vh;
+            max-width: 600px;
+            .name-form {
+                display: flex;
+                justify-content: space-between;
+                .nombre, .apellido {
+                    width: 48%;
+                    height: 2em;
+                    padding: 10px;
+                }
+            }
+            & textarea {
+                margin-top: 20px;
+                font-size: 1em;
+                font-weight: 500;
+                padding: 0.5em 1em;
+                height: 20vh;
+            }
+            .enviar {
+                margin: 1.2em 0;
+                padding: .7em 0;
+                text-align: center;
+                color: white;
+                font-weight: 500;
+                letter-spacing: 1px;
+                background-color: rgb(165,199,76);
+                border: none;
+                border-radius: 0.4em;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: rgb(30, 71, 93);
+    font-size: 0.8em;
+    margin-top: 50px;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    & a {
+    text-decoration: none;
+    color: var(--textcolor);
+    width: 70px;
+    margin:0 12px;
+    text-align: center;
+    }
+    }
