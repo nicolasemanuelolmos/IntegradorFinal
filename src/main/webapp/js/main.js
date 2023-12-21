@@ -80,7 +80,8 @@ function controlForm() {
 BTNCLICK.addEventListener('click',controlForm);
 
 function borrarForm() {
-    document.getElementById('total').value = "0";
+	var borrar = 0;
+    document.getElementById('total').innerText = borrar;
 }
 
 const BTNCLICK1 = document.getElementById('btnBorrar');

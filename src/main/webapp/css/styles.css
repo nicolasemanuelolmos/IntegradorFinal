@@ -71,6 +71,12 @@ header {
     background-color: rgb(151, 201, 62);
 }
 
+#btnDelete {
+    color: white;
+    background-color: rgb(151, 201, 62);
+
+}
+
 #btnResumen {
     color: white;
     background-color: rgb(151, 201, 62);

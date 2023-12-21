@@ -8,11 +8,12 @@
     <title>Comprar tickets</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="/bootstrap-5.3.2-dist/assets/img/codoacodo.jpg" alt="Logo codo a codo">
+            <img src="../assets/img/codoacodo.jpg" alt="Logo codo a codo">
             <h2>Conf Bs As</h2>
         </div>
         <nav>
@@ -107,16 +108,13 @@
                         <div class="alert mt-2 mb-4" id="totalPag" role="alert">Total a pagar: $ <span id="total"></span></div>
                         <div class="row gx-2 mb-2">
                             <div class="col-md mb-3">
-                                <button type="button" class="w-100 btn btn-lg btn-form " id="btnDelete">Eliminar</button>
+                                <button type="button" class="w-100 btn btn-lg btn-form " style="color: white; background-color: rgb(151, 201, 62);" id="btnDelete">Eliminar</button>
                             </div>
                             <div class="col-md mb-3">
                                 <button type="submit" class="w-100 btn btn-lg btn-form buttonColor" id="btnResumen">Modificar</button>
                             </div>
                             <div class="col-md mb-3">
                                 <button type="button" class="w-100 btn btn-lg btn-form " onclick ="location.href='../index.html'" id="btnBorrar">Confirmar</button>
-                            </div>
-                            <div class="col-md mb-3">
-                                <button type="button" class="w-100 btn btn-lg btn-form " onclick ="location.href='mostrarTickets.jsp'" id="btnBorrar">Mostrar Tickets</button>
                             </div>
                         </div>
                     </form>
@@ -136,8 +134,7 @@
             <a href="">Estudiantes</a>
         </nav>
     </footer>
-    <script src="/ProyectoIntegrador/bootstrap-5.3.2-dist/js/script.js"></script>
-    <script src="/ProyectoIntegrador/bootstrap-5.3.2-dist/js/main.js"></script>
-    <script src="/ProyectoIntegrador/bootstrap-5.3.2-dist/js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>

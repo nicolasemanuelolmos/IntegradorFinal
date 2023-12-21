@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Trabajo Integrador</title>
 </head>
 <body>
 
@@ -38,7 +38,7 @@
 	
 %>
 
-<jsp:include page = "../index.html"></jsp:include>
+<jsp:include page = "./index.html"></jsp:include>
 
 </body>
 </html>
